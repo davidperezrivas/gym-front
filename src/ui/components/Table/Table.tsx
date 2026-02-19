@@ -5,8 +5,6 @@ import { AgGridReact } from 'ag-grid-react';
 import SearchIcon from '@mui/icons-material/Search';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
-import { StoryButton } from '../../atoms/Button/Button';
-import AddIcon from '@mui/icons-material/Add';
 
 export const Table = ({ rowData, columnDefs }: Props) => {
   const [filterText, setFilterText] = useState('');
@@ -34,16 +32,6 @@ export const Table = ({ rowData, columnDefs }: Props) => {
                 <SearchIcon color="action" />
               </InputAdornment>
             ),
-          }}
-        />
-
-        <StoryButton
-          color="primary"
-          text="Añadir"
-          type="outlined"
-          startIcon={<AddIcon />}
-          onClick={() => {
-            console.log('');
           }}
         />
       </Box>
