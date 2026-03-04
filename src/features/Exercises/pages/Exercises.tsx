@@ -7,9 +7,16 @@ import { useState } from 'react';
 import { StoryButton } from '@/ui/atoms/Button/Button';
 import AddIcon from '@mui/icons-material/Add';
 import { ExerciseModal } from './modals/upsert.modal';
+import { useExercises } from '../hooks/queries/useExercises';
 
 export const Exercises = () => {
   const [openCreateModal, setOpenCreateModal] = useState(false);
+
+  const { data, isLoading, isError } = useExercises();
+
+  console.log('data', data);
+  console.log('isLoading', isLoading);
+  console.log('isError', isError);
 
   const handleOpenCreateModal = () => {
     setOpenCreateModal(true);
